@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC&family=Farsan&display=swap" rel="stylesheet">
+    <title>Contact Form with Captch</title>
+    <script src="script.js"></script>
+</head>
+
+<body onload="generate()"><br>
+    <h1>Contact form with captcha</h1>
+    <br><br>
+    <div class="contact-us">
+        <form action="#">
+            <label for="Name">NAME <em>&#x2a;</em>
+            </label><input id="Name" name=" Name"required="" type="text" /><label for="Email">EMAIL <em>&#x2a;</em></label>
+            <input id="Email" name="Email" required="" type="email" />
+            <label for="Phone">PHONE</label><input id="Phone" name="Phone" type="tel" />
+            <label for="Address">ADDRESS</label>
+            <input id="Address" name="Address" type="text" />
+            <label for="Note">YOUR MESSAGE
+                <em>&#x2a;</em></label><textarea id="Note" name="Note" required="" rows="4"></textarea>
+
+                <div id="user-input" class="inline">ENTER CAPTCHA
+                    <input type="text" id="submit"
+                        placeholder="Captcha code" />
+                </div>
+
+                <div class="inline" onclick="generate()">
+                    <i class="fas fa-sync"></i>
+                </div>
+
+                <div id="image" class="inline" selectable="False">
+                </div>
+                <input type="submit" id="btn" required="" onclick="printmsg()"  />
+
+                <p id="key"></p>
+
+        </form>
+    </div>
+</body>
+
+</html>
